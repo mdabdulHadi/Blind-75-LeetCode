@@ -35,3 +35,5 @@ public:
 //The time complexity of the program can be improved by using a more efficient sorting algorithm, 
 //such as the quicksort algorithm. The quicksort algorithm has a worst-case time complexity of O(n^2), 
 // but its average-case time complexity is O(n log n).
+// The space complexity of the program is O(n), because the program uses a vector to store the triplets. 
+// The size of the vector is at most n, so the space complexity of the program is O(n).
