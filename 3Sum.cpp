@@ -39,3 +39,50 @@ The time complexity of the code you have provided is O(n^2), because the main lo
 The space complexity of the code is O(n), because the code uses a vector to store the triplets. The size of the vector is at most n, so the space complexity of the code is O(n).*/
 // The space complexity of the program is O(n), because the program uses a vector to store the triplets. 
 // The size of the vector is at most n, so the space complexity of the program is O(n).
+/*
+#include <vector>
+#include <algorithm>
+
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        vector<vector<int>> result;
+        int sum, n = nums.size();
+        sort(nums.begin(), nums.end());
+        for (int i = 0; i < n - 2; i++) {
+            if (i == 0 || nums[i] != nums[i - 1]) {
+                int left = i + 1, right = n - 1;
+                while (left < right) {
+                    sum = nums[i] + nums[left] + nums[right];
+                    if (sum == 0) {
+                        result.push_back({nums[i], nums[left], nums[right]});
+                        int low = left + 1;
+                        while (low < right && nums[low] == nums[left]) {
+                            low++;
+                        }
+                        left = low;
+                        int high = right - 1;
+                        while (high > left && nums[high] == nums[right]) {
+                            high--;
+                        }
+                        right = high;
+                    } else if (sum < 0) {
+                        left++;
+                    } else {
+                        right--;
+                    }
+                }
+            }
+        }
+        return result;
+    }
+};
+//This code is optimized by using the following techniques:
+
+The quicksort algorithm is used to sort the array, which improves the time complexity of the code to O(n log n).
+The code checks if the current element is equal to the previous element before it starts iterating through the array. This is done to prevent the code from adding duplicate triplets to the result vector.
+The code uses a technique called two pointers to iterate through the array. This technique allows the code to quickly find the desired triplets without having to iterate through the entire array.
+The time complexity of the optimized code is O(n log n), because the quicksort algorithm is used to sort the array. The space complexity of the code is O(n), because the code uses a vector to store the triplets. The size of the vector is at most n, so the space complexity of the code is O(n).
+*/
+
+
