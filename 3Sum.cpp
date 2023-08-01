@@ -29,6 +29,9 @@ public:
     }
 };
 //the main loop iterates through the array nums n times, 
-and the inner loop iterates through the array nums from i + 1 to n - 1, 
-which is a total of n - i - 1 times. 
-The total number of iterations of the main loop and the inner loop is therefore n(n - i - 1), which is O(n^2)
+//and the inner loop iterates through the array nums from i + 1 to n - 1, 
+//which is a total of n - i - 1 times. 
+//The total number of iterations of the main loop and the inner loop is therefore n(n - i - 1), which is O(n^2)
+//The time complexity of the program can be improved by using a more efficient sorting algorithm, 
+//such as the quicksort algorithm. The quicksort algorithm has a worst-case time complexity of O(n^2), 
+// but its average-case time complexity is O(n log n).
