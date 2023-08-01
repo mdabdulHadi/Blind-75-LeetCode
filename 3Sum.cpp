@@ -28,3 +28,7 @@ public:
         return triplets;
     }
 };
+//the main loop iterates through the array nums n times, 
+and the inner loop iterates through the array nums from i + 1 to n - 1, 
+which is a total of n - i - 1 times. 
+The total number of iterations of the main loop and the inner loop is therefore n(n - i - 1), which is O(n^2)
